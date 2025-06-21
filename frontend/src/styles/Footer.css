@@ -1,0 +1,81 @@
+.footer {
+    overflow: hidden;
+    background-color: #111827;
+    color: #ffffff;
+    padding: 60px 50px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+  }
+  
+  .footer h2 {
+    font-size: 24px;
+    color: #14b8a6;
+    margin-bottom: 10px;
+  }
+  
+  .footer p {
+    font-size: 14px;
+    color: #9ca3af;
+  }
+  
+  .footer h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer ul li {
+    margin: 6px 0;
+  }
+  
+  .footer ul li a {
+    text-decoration: none;
+    color: #9ca3af;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer ul li a:hover {
+    color: #ffffff;
+  }
+  
+  .footer-contact p {
+    font-size: 14px;
+    color: #9ca3af;
+  }
+  
+  .footer-social {
+    margin-top: 10px;
+  }
+  
+  .footer-social a {
+    margin-right: 15px;
+    color: #9ca3af;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-social a:hover {
+    color: #ffffff;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    font-size: 13px;
+    color: #6b7280;
+    border-top: 1px solid #374151;
+    padding-top: 20px;
+    margin-top: 40px;
+  }
+  
