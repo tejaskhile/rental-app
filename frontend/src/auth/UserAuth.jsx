@@ -17,7 +17,7 @@ const UserAuth = ({ children }) => {
       }
 
       try {
-        const response = await axios.get(`${process.env.BACKEND_API}/auth/verify`, {
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/auth/verify`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -37,6 +37,9 @@ const UserAuth = ({ children }) => {
 
 
   useEffect(() => {
+    setTimeout(()=>{
+
+    }, 4000)
     if ((!user || !token)) {
       navigate("/");
       setShowLogin(true);

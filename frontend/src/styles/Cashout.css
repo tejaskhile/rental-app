@@ -1,119 +1,113 @@
-.cashout-container {
-  max-width: 900px;
-  margin: 40px auto;
+.cashout-bg {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cashout-main {
   background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 4px 32px rgba(0,0,0,0.08);
-  padding: 32px 24px;
-}
-
-.cashout-title {
-  text-align: center;
-  font-size: 2.2rem;
-  margin-bottom: 32px;
-  color: #2d3748;
-  letter-spacing: 1px;
-}
-
-.cashout-content {
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(60, 60, 90, 0.12);
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
-  justify-content: space-between;
+  max-width: 900px;
+  width: 100%;
+  margin: 40px 0;
+  overflow: hidden;
 }
 
-.cashout-room {
+.cashout-summary {
   flex: 1 1 340px;
+  background: #fafafa;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #f7fafc;
-  border-radius: 12px;
-  padding: 24px 16px;
+  border-right: 1px solid #eee;
+  min-width: 320px;
 }
 
 .cashout-room-img {
-  width: 260px;
-  height: 180px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 12px;
   margin-bottom: 18px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 }
 
-.cashout-room-details h2 {
-  margin: 0 0 10px 0;
+.cashout-room-info h2 {
   font-size: 1.4rem;
-  color: #22223b;
+  margin-bottom: 8px;
+  color: #222;
 }
 
 .cashout-location {
-  color: #4f8a8b;
-  font-size: 1rem;
-  margin-bottom: 8px;
+  color: #ff385c;
+  font-weight: 500;
+  margin-bottom: 16px;
 }
 
-.cashout-price {
-  font-weight: 600;
-  color: #22223b;
-  margin-bottom: 8px;
+.cashout-dates {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+  color: #444;
 }
 
-.cashout-price span {
-  color: #e07a5f;
-  font-size: 1.1rem;
-}
-
-.cashout-desc {
-  color: #555;
-  font-size: 0.98rem;
-  margin-top: 10px;
-}
-
-.cashout-payment {
-  flex: 1 1 320px;
-  background: #f1f5f9;
-  border-radius: 12px;
-  padding: 28px 20px;
+.cashout-price-details {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 6px;
+  font-size: 1.1rem;
+  margin-top: 12px;
 }
 
-.cashout-payment h3 {
-  margin-bottom: 18px;
-  color: #2d3748;
+.cashout-total {
+  font-weight: bold;
+  color: #222;
   font-size: 1.2rem;
 }
 
-.cashout-form {
-  width: 100%;
+.cashout-payment {
+  flex: 1 1 340px;
+  padding: 40px 32px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  justify-content: center;
+  min-width: 320px;
+}
+
+.cashout-payment h3 {
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+  color: #222;
 }
 
 .cashout-form label {
-  font-size: 0.98rem;
+  display: block;
+  font-size: 1rem;
   color: #444;
-  margin-bottom: 6px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+  margin-bottom: 8px;
 }
 
 .cashout-form input {
-  padding: 8px 12px;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
+  width: 100%;
+  padding: 12px;
+  margin-top: 4px;
+  margin-bottom: 18px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
   font-size: 1rem;
-  background: #fff;
-  outline: none;
+  background: #f7f7f7;
   transition: border 0.2s;
 }
 
 .cashout-form input:focus {
-  border: 1.5px solid #4f8a8b;
+  border: 1.5px solid #ff385c;
+  outline: none;
+  background: #fff;
 }
 
 .cashout-form-row {
@@ -122,28 +116,102 @@
 }
 
 .pay-btn {
-  background: #007bff;
+  width: 100%;
+  padding: 14px 0;
+  background: linear-gradient(90deg, #ff385c 0%, #ff7e5f 100%);
   color: #fff;
-  border: none;
-  border-radius: 8px;
-  padding: 12px 0;
   font-size: 1.1rem;
   font-weight: 600;
-  cursor: pointer;
+  border: none;
+  border-radius: 10px;
   margin-top: 10px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(255,56,92,0.08);
   transition: background 0.2s;
+}
+
+.pay-btn:disabled {
+  background: #ffd1db;
+  cursor: not-allowed;
 }
 
 .cashout-success {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #007bff;
-  font-size: 1.1rem;
-  gap: 10px;
+  color: #27ae60;
+  font-size: 1.2rem;
+  gap: 12px;
+  margin-top: 24px;
 }
 
 .cashout-success i {
   font-size: 2.5rem;
-  color: #007bff;
+  color: #27ae60;
+}
+
+.cashout-home-btn {
+  margin-top: 18px;
+  padding: 10px 28px;
+  background: #ff385c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cashout-home-btn:hover {
+  background: #e11d48;
+}
+
+.cashout-secure {
+  margin-top: 28px;
+  color: #888;
+  font-size: 0.98rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+@media (max-width: 900px) {
+  .cashout-main {
+    flex-direction: column;
+    max-width: 98vw;
+  }
+  .cashout-summary, .cashout-payment {
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    min-width: unset;
+    padding: 28px 16px;
+  }
+  .cashout-payment {
+    padding: 32px 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cashout-room-img{
+    display: none;
+  }
+  .cashout-main {
+    flex-direction: column;
+    max-width: 85vw;
+  }
+  .cashout-summary{
+    margin-top: 30px;
+  }
+  
+  .cashout-summary, .cashout-payment {
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    min-width: unset;
+    padding: 25px 14px;
+  }
+  .cashout-payment {
+    padding: 32px 16px;
+  }
 }
