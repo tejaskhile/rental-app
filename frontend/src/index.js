@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import RoomDetails from "./pages/RoomDetails";
 import { UserProvider } from "./context/userContext";
 import UserAuth from "./auth/UserAuth";
@@ -11,7 +11,7 @@ import Cashout from "./pages/Cashout";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <UserProvider>
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<App />}></Route>
         <Route
@@ -34,6 +34,6 @@ root.render(
           }
         ></Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </UserProvider>
 );
