@@ -124,3 +124,56 @@ span {
     color: #0056b3;
     text-decoration: underline;
 }
+
+
+@media screen and (max-width: 600px) {
+    .login-header,
+    .form {
+        width: 75vw;
+        min-width: unset;
+        padding: 16px 15px;
+        border-radius: 16px 16px 0 0;
+    }
+
+    .login-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        align-items: flex-start;
+        padding-bottom: 10px;
+    }
+
+    .form {
+        padding: 10px 8px 24px;
+        border-radius: 0 0 16px 16px;
+    }
+
+    .login-form input {
+        width: 62vw;
+        font-size: 13px;
+        padding: 10px 14px;
+    }
+
+    .login-button {
+        width: 65vw;
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    .login-tabs button {
+        font-size: 15px;
+        min-width: 60px;
+        height: 30px;
+        padding: 3px 6px;
+    }
+
+    .fa-xmark {
+        font-size: 18px;
+        align-self: flex-end;
+    }
+
+    span, .link-btn {
+        font-size: 13px;
+    }
+}
